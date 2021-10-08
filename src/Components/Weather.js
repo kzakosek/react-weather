@@ -26,11 +26,10 @@ function Weather() {
                 setSearches(searches => [input, ...searches].slice(0, 5));
                 setWeather(response.data.main);
                 setName(response.data.name);
-                setCondition(response.data.weather);
                 setLoading(false);
             }
         } catch (err) {
-            console.log(err.response.data);s
+            console.log(err.response.data);
             setError(true);
         }
     }
