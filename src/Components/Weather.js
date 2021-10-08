@@ -10,7 +10,6 @@ function Weather() {
     const [input, setInput] = useState('')
     const [name, setName] = useState('')
     const [weathers, setWeather] = useState([])
-    const [condition, setCondition] = useState()
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     const [searches, setSearches] = useState([])
@@ -31,7 +30,7 @@ function Weather() {
                 setLoading(false);
             }
         } catch (err) {
-            console.log(err.response.data);
+            console.log(err.response.data);s
             setError(true);
         }
     }
@@ -76,7 +75,7 @@ function Weather() {
                     if (loading) {
                         if (error) {
                             return (
-                                <div className="alert alert-danger" role="alert"> Wrong city </div>
+                                <div className="alert alert-danger" role="alert"> Wrong city </div> 
                             )
                         } else {
                             return (
