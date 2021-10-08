@@ -16,7 +16,7 @@ function Weather() {
     const [searches, setSearches] = useState([])
 
     var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + input + '&units=metric&appid=50edd61f4ff2018c56342ffa46223816'
-    var iconUrl = 'http://openweathermap.org/img/wn/'+condition[0].icon+'@4x.png'
+
     const handleClick = async () => {
         try {
             setName('');
@@ -88,8 +88,7 @@ function Weather() {
                     } else {
                         return (
                             <div>
-                                <div>
-                                <img src={iconUrl} alt="weather image" width="150" height="150"/>{condition[0].main}</div>
+
                                 <table className="styled-table">
                                     <tbody className="content">
                                         <tr>
