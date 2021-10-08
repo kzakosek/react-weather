@@ -10,11 +10,13 @@ function Weather() {
     const [input, setInput] = useState('')
     const [name, setName] = useState('')
     const [weathers, setWeather] = useState([])
+    const [condition, setCondition] = useState()
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     const [searches, setSearches] = useState([])
 
     var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + input + '&units=metric&appid=50edd61f4ff2018c56342ffa46223816'
+    var iconUrl = '';
 
     const handleClick = async () => {
         try {
@@ -26,7 +28,10 @@ function Weather() {
                 setSearches(searches => [input, ...searches].slice(0, 5));
                 setWeather(response.data.main);
                 setName(response.data.name);
+                setCondition(response.data.weather);
                 setLoading(false);
+
+                iconUrl = 'http://openweathermap.org/img/wn/' + condition[0].icon + '@4x.png'
             }
         } catch (err) {
             console.log(err.response.data);
@@ -74,7 +79,7 @@ function Weather() {
                     if (loading) {
                         if (error) {
                             return (
-                                <div className="alert alert-danger" role="alert"> Wrong city </div> 
+                                <div className="alert alert-danger" role="alert"> Wrong city </div>
                             )
                         } else {
                             return (
@@ -86,7 +91,9 @@ function Weather() {
                     } else {
                         return (
                             <div>
-
+                                <div>
+                                    <img src={iconUrl} alt="weather image" width="150" height="150" />{condition[0].main}
+                                </div>
                                 <table className="styled-table">
                                     <tbody className="content">
                                         <tr>
