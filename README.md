@@ -1,6 +1,6 @@
 <!-- Image -->
 
- <img src="../Images/front.png" alt="Front" width="80" height="80">
+![Alt text](src\Images\front.png?raw=true "Title")
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
