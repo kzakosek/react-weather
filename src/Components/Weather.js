@@ -31,7 +31,6 @@ function Weather() {
                 setCondition(response.data.weather[0].main);
                 setIcon(response.data.weather[0].icon)
                 setLoading(false);
-
             }
         } catch (err) {
             console.log(err.response.data);
