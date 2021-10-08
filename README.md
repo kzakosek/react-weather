@@ -1,24 +1,17 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 Weather app
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Overview:
+* Get weather information in degrees (°C) for the entered city. 
+* Informations are obtained from https://openweathermap.org/api
 
 <!-- INSTALLATION -->
 ### Installation
 
 1. Clone the repo
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/kzakosek/react-weather.git
   
 2. Install NPM packages
    npm install react-bootstrap@next bootstrap@5.1.1
@@ -57,6 +50,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Klemen Zakošek - (www.linkedin.com/in/klemen-zakošek-448a96192)
 
-Project Link: https://github.com/your_username/repo_name
-
+Project Link: https://github.com/kzakosek/react-weather.git
 
