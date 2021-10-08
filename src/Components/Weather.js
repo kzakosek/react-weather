@@ -42,7 +42,7 @@ function Weather() {
         //do when searches changes
         if (input.trim().length > 0) {
             var searchOptions = document.getElementById("dataList");
-            if (searchOptions.options.length > 2) {
+            if (searchOptions.options.length > 4) {
                 searchOptions.children[0].remove()
             }
             searchOptions.innerHTML += '<option value="' + input + '"></option>';
@@ -91,7 +91,7 @@ function Weather() {
                         return (
                             <div>
                                 <div>
-                                    <img src={iconUrl} alt="weather image" width="150" height="150" />{condition}
+                                    <img src={iconUrl} alt="weather" width="150" height="150" />{condition}
                                 </div>
                                 <table className="styled-table">
                                     <tbody className="content">
@@ -103,11 +103,11 @@ function Weather() {
                                             <td>Humidity</td>
                                         </tr>
                                         <tr>
-                                            <td>{weathers.temp}°C</td>
-                                            <td>{weathers.feels_like}°C</td>
-                                            <td>{weathers.temp_min}°C</td>
-                                            <td>{weathers.temp_max}°C</td>
-                                            <td>{weathers.humidity}%</td>
+                                            <td>{Math.round(weathers.temp)}°C</td>
+                                            <td>{Math.round(weathers.feels_like)}°C</td>
+                                            <td>{Math.round(weathers.temp_min)}°C</td>
+                                            <td>{Math.round(weathers.temp_max)}°C</td>
+                                            <td>{Math.round(weathers.humidity)}%</td>
                                         </tr>
                                     </tbody>
                                 </table>

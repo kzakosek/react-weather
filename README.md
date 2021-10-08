@@ -1,3 +1,7 @@
+<!-- Image -->
+
+ <img src="Images/front.png" alt="Front" width="80" height="80">
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
